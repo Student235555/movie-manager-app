@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <>
-      <div>Strona główna</div>
+      <div>Strona główna !!!</div>
     </>
   );
 }
