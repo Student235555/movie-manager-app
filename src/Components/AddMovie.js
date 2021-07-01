@@ -3,8 +3,9 @@ import './AddMovie.css'
 
 const AddMovie = () => {
     return (
-        <div>
-
+        <div className='form'>
+          <div>Dodaj film</div>
+          <hr/>
         </div>
       );
 }

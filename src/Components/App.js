@@ -4,7 +4,7 @@ import AddMovie from './AddMovie';
 import MovieList from './MovieList';
 
 
-let movies = [
+let myMovies = [
   {
     id: 0,
     name: "Pulp Fiction",
@@ -45,11 +45,13 @@ let movies = [
     active: true,
     finishDate: null
   },
-  
 ]
 
+//setMovies(searches => [...movies, query])
 
 function App() {
+
+const [movies, setMovies] = useState(myMovies);
 
   return (
     <>
