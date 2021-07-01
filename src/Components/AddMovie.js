@@ -1,2 +1,12 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import './AddMovie.css'
+
+const AddMovie = () => {
+    return (
+        <div>
+
+        </div>
+      );
+}
+ 
+export default AddMovie;
