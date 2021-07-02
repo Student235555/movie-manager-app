@@ -1,0 +1,10 @@
+.mbtn{
+    padding: 2px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+
+.divMovie{
+    margin-bottom: 10px;
+}
