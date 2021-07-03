@@ -4,7 +4,9 @@ import AddMovie from './AddMovie';
 import MovieList from './MovieList';
 
 
-let myMovies = [
+//setMovies(searches => [...movies, query])
+
+const myMovies = [
   {
     id: 0,
     name: "Pulp Fiction",
@@ -47,26 +49,30 @@ let myMovies = [
   },
 ]
 
-//setMovies(searches => [...movies, query])
-
-const deleteMovie = (id) => {
-  console.log("delete" + id)
-}
-
 const changeMovieStatus = (id) => {
   console.log("change" + id)
 }
 
-function App() {
 
-const [movies, setMovies] = useState(myMovies);
+const App = () => {
+
+  const [movies, setMovies] = useState(myMovies);
+
+  const deleteMovie = (id) => {
+
+    console.log(id)
+    
+    const newList = movies.filter((item) => item.id !== id);
+ 
+    setMovies(newList);
+  }
 
   return (
     <>
       <div className='main'>
         <h2>MOVIE MANAGER APP</h2>
         <AddMovie/>
-        <MovieList movies = {myMovies} delete={deleteMovie} change={changeMovieStatus}/>
+        <MovieList movies = {movies} delete = {deleteMovie} change={changeMovieStatus}/>
       </div>
     </>
   );
