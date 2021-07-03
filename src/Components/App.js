@@ -3,9 +3,6 @@ import './App.css';
 import AddMovie from './AddMovie';
 import MovieList from './MovieList';
 
-
-//setMovies(searches => [...movies, query])
-
 const myMovies = [
   {
     id: 0,
@@ -49,21 +46,25 @@ const myMovies = [
   },
 ]
 
-const changeMovieStatus = (id) => {
-  console.log("change" + id)
-}
-
-
 const App = () => {
 
   const [movies, setMovies] = useState(myMovies);
 
-  const deleteMovie = (id) => {
+  const changeMovieStatus = id => {
+    console.log("change " + id);
 
-    console.log(id)
-    
+    setMovies(
+      movies.map(item => 
+          item.id === id 
+          ? {...item, active : false} 
+          : item 
+  ))
+   
+  }
+
+  const deleteMovie = (id) => {
+    console.log('delete ' + id);
     const newList = movies.filter((item) => item.id !== id);
- 
     setMovies(newList);
   }
 
@@ -72,7 +73,7 @@ const App = () => {
       <div className='main'>
         <h2>MOVIE MANAGER APP</h2>
         <AddMovie/>
-        <MovieList movies = {movies} delete = {deleteMovie} change={changeMovieStatus}/>
+        <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus}/>
       </div>
     </>
   );
