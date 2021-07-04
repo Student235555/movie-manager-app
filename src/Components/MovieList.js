@@ -13,17 +13,17 @@ const MovieList = ({movies, deletee, change}) => {
 
     return ( 
         <>
-            <div className='active'>
+            <ul className='active'>
                 <h1>Filmy do obejrzenia</h1>
-                {activeMovies}
-            </div>
+                {activeMovies.length ? activeMovies : <p>Brak filmów do obejrzenia.</p>}
+            </ul>
 
             <hr/>
 
-            <div className='finished'>
-            <h3>Obejrzane filmy (0)</h3>
+            <ul className='finished'>
+            <h3>Obejrzane filmy ({done.length})</h3>
             {doneMovies}
-            </div>
+            </ul>
         </>
      );
 }
