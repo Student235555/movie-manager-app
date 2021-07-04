@@ -10,7 +10,8 @@ const myMovies = [
     director: "Quentin Tarantino",
     releaseDate: '1994-05-21',
     active: true,
-    finishDate: null
+    finishDate: null,
+    special: false
   },
   {
     id: 1,
@@ -18,7 +19,8 @@ const myMovies = [
     director: "Taika Waititi",
     releaseDate: '2019-09-08',
     active: true,
-    finishDate: null
+    finishDate: null,
+    special: false
   },
   {
     id: 2,
@@ -26,7 +28,8 @@ const myMovies = [
     director: "Noah Baumbach",
     releaseDate: '2019-08-29',
     active: true,
-    finishDate: null
+    finishDate: null,
+    special: false
   },
   {
     id: 3,
@@ -34,7 +37,8 @@ const myMovies = [
     director: "Yórgos Lánthimos",
     releaseDate:'2018-08-30',
     active: true,
-    finishDate: null
+    finishDate: null,
+    special: true
   },
   {
     id: 4,
@@ -42,7 +46,8 @@ const myMovies = [
     director: "Denis Villeneuve",
     releaseDate: '2017-10-03',
     active: true,
-    finishDate: null
+    finishDate: null,
+    special: false
   },
 ]
 
@@ -51,19 +56,18 @@ const App = () => {
   const [movies, setMovies] = useState(myMovies);
 
   const changeMovieStatus = id => {
-    console.log("change " + id);
-
+    //console.log("change " + id);
     setMovies(
       movies.map(item => 
           item.id === id 
-          ? {...item, active : false} 
+          ? {...item, active : false, finishDate : new Date().getTime()} 
           : item 
   ))
    
   }
 
   const deleteMovie = (id) => {
-    console.log('delete ' + id);
+    //console.log('delete ' + id);
     const newList = movies.filter((item) => item.id !== id);
     setMovies(newList);
   }
