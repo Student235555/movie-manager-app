@@ -51,12 +51,13 @@ const myMovies = [
   },
 ]
 
+let counter = myMovies.length;
+
 const App = () => {
 
   const [movies, setMovies] = useState(myMovies);
 
   const changeMovieStatus = id => {
-    //console.log("change " + id);
     setMovies(
       movies.map(item => 
           item.id === id 
@@ -67,16 +68,31 @@ const App = () => {
   }
 
   const deleteMovie = (id) => {
-    //console.log('delete ' + id);
     const newList = movies.filter((item) => item.id !== id);
     setMovies(newList);
+  }
+
+  const addMovie = (name, director, releaseDate, special) => {
+
+    const movie =  {
+      id: counter,
+      name: name,
+      director: director,
+      releaseDate: releaseDate,
+      active: true,
+      finishDate: null,
+      special: special
+    }
+    counter++;
+    setMovies([...movies, movie]);
+    return true;
   }
 
   return (
     <>
       <div className='main'>
         <h1>MOVIE MANAGER APP</h1>
-        <AddMovie/>
+        <AddMovie add={addMovie}/>
         <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus}/>
       </div>
     </>

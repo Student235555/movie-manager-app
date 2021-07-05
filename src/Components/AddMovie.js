@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './AddMovie.css'
 
-const AddMovie = () => {
+const AddMovie = ({add}) => {
 
   const today = new Date().toISOString().slice(0,10);
   const minDate = "1888-01-01";
@@ -16,7 +16,18 @@ const AddMovie = () => {
 
 
   const handleClick = () => {
-    
+      if(movieTitle.length>1){
+      const ada = add(movieTitle, movieDirector, releaseDate, isSpecial);
+      if(ada){
+        setMovieTitle('');
+        setMovieDirector('');
+        setIsSpecial(false);
+        setReleaseDate(today);
+      }
+    }else{
+      alert('Podano zbyt krótki tytuł.')
+      setMovieTitle('');
+    }
   }
 
 
