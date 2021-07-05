@@ -75,7 +75,7 @@ const App = () => {
   return (
     <>
       <div className='main'>
-        <h2>MOVIE MANAGER APP</h2>
+        <h1>MOVIE MANAGER APP</h1>
         <AddMovie/>
         <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus}/>
       </div>
