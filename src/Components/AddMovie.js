@@ -16,7 +16,7 @@ const AddMovie = ({add}) => {
 
 
   const handleClick = () => {
-      if(movieTitle.length>1){
+      if(movieTitle.length>1 && movieDirector.length>1){
       const ada = add(movieTitle, movieDirector, releaseDate, isSpecial);
       if(ada){
         setMovieTitle('');
@@ -25,7 +25,7 @@ const AddMovie = ({add}) => {
         setReleaseDate(today);
       }
     }else{
-      alert('Podano zbyt krótki tytuł.')
+      alert('Tytuł i reżyser muszą mieć co najmniej 2 znaki.')
       setMovieTitle('');
     }
   }
