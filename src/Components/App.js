@@ -72,6 +72,10 @@ const App = () => {
     setMovies(newList);
   }
 
+  const editMovie = (id) => {
+    console.log('edycja ' + id)
+  }
+
   const addMovie = (name, director, releaseDate, special) => {
 
     const movie =  {
@@ -93,7 +97,7 @@ const App = () => {
       <div className='main'>
         <h1>MOVIE MANAGER APP</h1>
         <AddMovie add={addMovie}/>
-        <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus}/>
+        <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus} edit={editMovie}/>
       </div>
     </>
   );
