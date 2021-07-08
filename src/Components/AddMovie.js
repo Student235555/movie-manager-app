@@ -43,7 +43,8 @@ const AddMovie = ({add}) => {
           <label className="labelSpec" htmlFor="special">Wyróżnienie</label>
           <label htmlFor="date">Data premiery:</label>
           <input type="date" value={releaseDate} min={minDate} max={maxDate} onChange={event => setReleaseDate(event.target.value)}></input><br/>
-          <button onClick={handleClick}>Dodaj</button>
+          <button onClick={handleClick}>Dodaj</button><br/>
+          <input className="searchBar" placeholder="Wyszukaj..."></input>
           <hr/>
         </div>
       );

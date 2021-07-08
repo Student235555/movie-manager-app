@@ -96,7 +96,6 @@ const App = () => {
     <>
       <div className='main'>
         <h1>MOVIE MANAGER APP</h1>
-        <input className="searchBar" placeholder="Wyszukaj..."></input>
         <AddMovie add={addMovie}/>
         <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus} edit={editMovie}/>
       </div>
