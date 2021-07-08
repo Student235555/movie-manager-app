@@ -27,6 +27,7 @@ const AddMovie = ({add}) => {
     }else{
       alert('Tytuł i reżyser muszą mieć co najmniej 2 znaki.')
       setMovieTitle('');
+      setMovieDirector('');
     }
   }
 
