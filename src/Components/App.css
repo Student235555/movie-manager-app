@@ -9,3 +9,9 @@
   height: 100vh;
   background-color: #d0bdf4;
 }
+
+.searchBar{
+  position: relative;
+  right: 0;
+  top: 0;
+}
