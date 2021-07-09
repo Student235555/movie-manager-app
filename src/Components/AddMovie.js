@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './AddMovie.css'
 
-const AddMovie = ({add}) => {
+const AddMovie = ({add, movies}) => {
 
   const today = new Date().toISOString().slice(0,10);
   const minDate = "1888-01-01";
@@ -13,6 +13,7 @@ const AddMovie = ({add}) => {
   const [movieDirector, setMovieDirector] = useState('');
   const [isSpecial, setIsSpecial] = useState(false);
   const [releaseDate, setReleaseDate] = useState(today);
+  
 
 
   const handleClick = () => {
@@ -31,7 +32,6 @@ const AddMovie = ({add}) => {
     }
   }
 
-
     return (
         <div className='form'>
           <div>Podaj dane filmu:</div>
@@ -44,7 +44,6 @@ const AddMovie = ({add}) => {
           <label htmlFor="date">Data premiery:</label>
           <input type="date" value={releaseDate} min={minDate} max={maxDate} onChange={event => setReleaseDate(event.target.value)}></input><br/>
           <button onClick={handleClick}>Dodaj</button><br/>
-          <input className="searchBar" placeholder="Wyszukaj..."></input>
           <hr/>
         </div>
       );
