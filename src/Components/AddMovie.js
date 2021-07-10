@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './AddMovie.css'
 
-const AddMovie = ({add, movies}) => {
+const AddMovie = ({add}) => {
 
   const today = new Date().toISOString().slice(0,10);
   const minDate = "1888-01-01";

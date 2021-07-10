@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import Movie from './Movie';
 
-const MovieList = ({movies, deletee, change, edit}) => {
+const MovieList = ({movies, deletee, change}) => {
     const active = movies.filter(movie => movie.active)
     const done = movies.filter(movie => !movie.active)
 
     const [search, setSearch] = useState('');
 
     const activeMovies = active.map(movie =>
-         <Movie key={movie.id} movie={movie} deletee={deletee} change={change} edit={edit}/>)
+         <Movie key={movie.id} movie={movie} deletee={deletee} change={change}/>)
 
     const doneMovies = done.map(movie =>
          <Movie key={movie.id} movie={movie} deletee={deletee}/>)
