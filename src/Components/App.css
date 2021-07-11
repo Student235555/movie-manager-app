@@ -6,12 +6,8 @@
 }
 
 .main{
-  height: 100vh;
+  min-height: 100vh;
   background-color: #d0bdf4;
+  padding-bottom: 20px;
 }
 
-.searchBar{
-  position: relative;
-  right: 0;
-  top: 0;
-}

@@ -95,6 +95,7 @@ const App = () => {
         <AddMovie add={addMovie}/>
         <MovieList movies = {movies} deletee = {deleteMovie} change={changeMovieStatus}/>
       </div>
+      
     </>
   );
 }
