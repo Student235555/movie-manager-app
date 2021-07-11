@@ -11,8 +11,8 @@ const Movie = ({movie, deletee, change}) => {
 
     if(active){
     return ( 
-        <li className='divMovie'>
-            <p>
+        <li className='liMovie'>
+            <p className='oneMovieA'>
                 <strong style={special ? specialColor : null}>{name}</strong>, reż. {director}, (premiera: {releaseDate})
                 <button onClick = {() => change(id)} className = 'mbtn'>Obejrzany</button>
                 <button onClick = {() => deletee(id)} className = 'mbtn'>X</button>
@@ -24,8 +24,8 @@ const Movie = ({movie, deletee, change}) => {
     const finish = new Date(finishDate).toLocaleDateString();
 
     return(
-        <li className='divMovie'>
-            <p>
+        <li className='liMovie'>
+            <p className='oneMovieF'>
                 <strong>{name}</strong>, reż. {director}, (premiera: {releaseDate}) <br/>
                 Film obejrzano: <span>{finish}</span>
                 <button onClick = {() => deletee(id)} className = 'mbtn'>X</button>

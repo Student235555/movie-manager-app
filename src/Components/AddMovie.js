@@ -18,15 +18,15 @@ const AddMovie = ({add}) => {
 
   const handleClick = () => {
       if(movieTitle.length>1 && movieDirector.length>1){
-      const ada = add(movieTitle, movieDirector, releaseDate, isSpecial);
-      if(ada){
+      const newMovie = add(movieTitle, movieDirector, releaseDate, isSpecial);
+      if(newMovie){
         setMovieTitle('');
         setMovieDirector('');
         setIsSpecial(false);
         setReleaseDate(today);
       }
     }else{
-      alert('Tytuł i reżyser muszą mieć co najmniej 2 znaki.')
+      alert('Zarówno tytuł, jak i reżyser, muszą mieć co najmniej 2 znaki.')
       setMovieTitle('');
       setMovieDirector('');
     }
