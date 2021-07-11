@@ -1,13 +1,17 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-align: center;
+  font-family: 'Roboto Condensed', arial, sans-serif;
 }
 
 .main{
   min-height: 100vh;
-  background-color: #d0bdf4;
+  background-color: #3F8EFC;
   padding-bottom: 20px;
 }
 

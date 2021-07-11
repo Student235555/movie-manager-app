@@ -2,6 +2,7 @@ input{
     margin: 10px;
     padding: 5px 10px;
     font-size: 20px;
+    background-color: #ADD7F6;
 }
 
 .form{
@@ -13,7 +14,20 @@ input{
     text-transform: uppercase;
     margin: 20px;
     font-size: 20px;
-    background-color: whitesmoke;
+}
+
+.addBtn{
+    border-radius: 10rem;
+    color: #fff;
+    cursor: pointer;
+    background-color: #2667FF;
+    letter-spacing: .15rem;
+    transition: 0.3s;
+}
+
+.addBtn:hover{
+    background-color: #ADD7F6;
+    color: #000;
 }
 
 .labelSpec{
