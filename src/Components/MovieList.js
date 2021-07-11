@@ -22,16 +22,16 @@ const MovieList = ({movies, deletee, change}) => {
     return ( 
         <> 
             <ul className='active'>
-                <h1>Filmy do obejrzenia</h1>
-                <input className="searchBar" placeholder="Wyszukaj..." value={search}
+                <h1>Movies to watch:</h1>
+                <input className="searchBar" placeholder="Search..." value={search}
                 onChange={event => setSearch(event.target.value)}></input>
-                {search ? filteredMovies : (activeMovies.length ? activeMovies : <p>Brak filmów do obejrzenia.</p>)}
+                {search ? filteredMovies : (activeMovies.length ? activeMovies : <p>No more movies to watch.</p>)}
             </ul>
 
             <hr/>
 
             <ul className='finished'>
-               <h3>Obejrzane filmy ({done.length})</h3>
+               <h3>Watched movies ({done.length})</h3>
                {doneMovies}
             </ul>
         </>

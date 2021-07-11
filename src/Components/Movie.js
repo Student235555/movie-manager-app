@@ -13,9 +13,9 @@ const Movie = ({movie, deletee, change}) => {
     return ( 
         <li className='liMovie'>
             <p className='oneMovieA'>
-                <strong style={special ? specialColor : null}>{name}</strong>, reż. {director}, (premiera: {releaseDate})
-                <button onClick = {() => change(id)} className = 'mbtn'>Obejrzany</button>
-                <button onClick = {() => deletee(id)} className = 'mbtn'>X</button>
+                <strong style={special ? specialColor : null}>{name}</strong>, dir. {director}, (release date: {releaseDate})
+                <button onClick = {() => change(id)} className = 'mbtn'>Watched</button>
+                <button onClick = {() => deletee(id)} className = 'mbtnx'>X</button>
             </p>
         </li>
      );
@@ -26,9 +26,9 @@ const Movie = ({movie, deletee, change}) => {
     return(
         <li className='liMovie'>
             <p className='oneMovieF'>
-                <strong>{name}</strong>, reż. {director}, (premiera: {releaseDate}) <br/>
-                Film obejrzano: <span>{finish}</span>
-                <button onClick = {() => deletee(id)} className = 'mbtn'>X</button>
+                <strong>{name}</strong>, dir. {director}, (release date: {releaseDate}) <br/>
+                Movie watched at: <span>{finish}</span>
+                <button onClick = {() => deletee(id)} className = 'mbtnx'>X</button>
             </p>
         </li>
     )

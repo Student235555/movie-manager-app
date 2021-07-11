@@ -34,16 +34,16 @@ const AddMovie = ({add}) => {
 
     return (
         <div className='form'>
-          <div>Podaj dane filmu:</div>
-          <input type="text" placeholder = "Wpisz tytuł filmu..." value={movieTitle} 
+          <div>Add movie data:</div>
+          <input type="text" placeholder = "Enter movie title..." value={movieTitle} 
           onChange={event => setMovieTitle(event.target.value)}></input>
-          <input type="text" placeholder = "Wpisz reżysera filmu..." value={movieDirector} 
+          <input type="text" placeholder = "Enter movie director..." value={movieDirector} 
           onChange={event => setMovieDirector(event.target.value)}></input><br/>
           <input type="checkbox" checked = {isSpecial} id="special" onChange={event => setIsSpecial(event.target.checked)}></input>
-          <label className="labelSpec" htmlFor="special">Wyróżnienie</label>
-          <label htmlFor="date">Data premiery:</label>
+          <label className="labelSpec" htmlFor="special">Mark as special</label>
+          <label htmlFor="date">Release date:</label>
           <input type="date" value={releaseDate} min={minDate} max={maxDate} onChange={event => setReleaseDate(event.target.value)}></input><br/>
-          <button onClick={handleClick}>Dodaj</button><br/>
+          <button className='addBtn' onClick={handleClick}>Add movie</button><br/>
           <hr/>
         </div>
       );
